@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kalufira',sans-serif;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Kalufira';
+  src: url(./Kalufira.woff)format('woff');
+}
+
+
+body {
+  background: #fff;
+  color: #454545;
+  padding: 30px 50px;
+  font-family:'Kalufira',sans-serif;
+}
+
+/* Navigation Bar */
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: #454545;
+  background: #ffd93b;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #ffd93b;
+  margin-left: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic:hover {
+  width: 190px;
+  height: 190px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: #4a3d0c;
+  transform: rotate(360deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 2s;
+}
+
+.intro-text h1 {
+  font-size: 100px;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.subtitle {
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+/* About Section */
+.about {
+  margin-top: 40px;
+  max-width: 60%;
+}
+
+.about h2 {
+  font-size: 80px;
+  margin-left: 10px;
+}
+
+.about p {
+  font-size: 25px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-align: justify;
+  margin-left: 10px;
+}
+
+/* Portfolio Box */
+.portfolio {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+}
+
+.portfolio-box {
+  width: 500px;
+  height: 400px;
+  background: #ffdc52;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-end;
+}
+
+.download-div{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+}
+
+.portfolio-box h1 {
+  font-size: 80px;
+} 
+.portfolio-box h2 {
+  font-size: 70px;
+}
+
+.download-btn{
+  background: #fff;
+  color: #454545;
+  border: none;
+  padding: 1px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 50px;
+  margin-left: 50px;;
+}
+
+.download-btn:hover{
+  background: #454545;
+  color: #fff;
+}
+
+/* Works Section */
+.works {
+  margin-top: 50px;
+}
+
+.works h2 {
+  font-size: 80px;
+  margin-left: 10px;
+}
+
+.work-grid {
+  display: flex;
+  margin-left: 10px;
+  gap: 20px;
+}
+
+.folder {
+  width: 300px;
+  height: 450px;
+  background: #ffd93b;
+  border-radius: 6px;
+}
+
+.work-item p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.game-grid {
+  display: flex;
+  margin: 10px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.game-item{
+  width: 400px;
+  height: 250px;
+}
+
+.game-item p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 35px;
+  font-family: 'Kalufira', sans-serif;
+}
+
+.game-folder {
+  width: 380px;
+  height: 250px;
+  background: #ffd93b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 6px; 
+}
+
+.game-folder img{
+  width: 380px;
+  height: 250px;
+  object-fit: fill;
+} 
+
+.game-folder p{
+  font-weight: normal;
+} 
+
+.contact-box {
+  margin-top: 30px;
+}
+
+.contact{
+  width: 100%;
+  background: #ffd93b;
+  padding: 20px;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+
+.contact h1{
+  text-align: right;
+  font-size: 30px;
+}
+
+.contact p{
+  text-align: right;
+  font-size: 20px;
+}
+
+.gallery-grid{
+  columns: 400px;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.gallery-grid img{
+  border-radius: 10px;
+  width: 100%;
+  margin: 20px;
+  height: auto;
+  display: block;
+}
+
+.gallery-grid img:hover{
+  transition: transform 0.3s ease;
+  transform: translateY(-8px);
+}
+
+
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #ffd93b;
+    padding: 5px;
+    width: 100%;
+    height: 80px;
+    margin:50px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%; /* start off-screen */
+    animation: marquee 15s linear infinite;
+  }
+
+  .marquee-content span {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 50px;
+    color: #454545;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* moves content fully left */
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 50px;
+  }
+  
+  .video-grid h1{
+    font-size: 50px;
+    width: 100%;
+  }
+  /* ====== Video card ====== */
+  .video-card-ver {
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-card {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .video-card .description {
+    padding: 12px 16px;
+  }
+
+  .video-card .description h1 {
+    margin: 0 0 8px 0;
+    text-align: center;
+  }
+
+  .video-card-ver .description h1 {
+    margin: 0 0 8px 0;
+    text-align: center;
+  }
+
+    h1 {
+    font-size: 80px;
+  }
+
+  /* Grid layout */
+  .pdf-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 20px 0;
+    gap: 20px;
+  }
+
+  /* Individual PDF card */
+  .pdf-card {
+    width: 300px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  .pdf-card h2{
+   text-align: center;
+  }
+
+  .pdf-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .pdf-card h2 {
+    margin: 10px 0 8px;
+    font-size: 30px;
+  }
+
+  .pdf-card button {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
