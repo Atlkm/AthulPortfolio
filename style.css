@@ -4,12 +4,17 @@
   box-sizing: border-box;
   font-family: 'Kalufira',sans-serif;
   font-weight: normal;
+   scroll-behavior: smooth;
 }
 @font-face {
   font-family: 'Kalufira';
   src: url(./Kalufira.woff)format('woff');
 }
 
+@font-face {
+  font-family: 'AnimeAce';
+  src: url(./Animeace.woff)format('woff');
+}
 
 body {
   background: #fff;
@@ -39,6 +44,7 @@ header a {
   padding: 8px 16px;
   border-radius: 4px;
   font-size: 25px;
+  transition: 0.5s ease-in;
 }
 
 /* Intro Section */
@@ -49,15 +55,26 @@ header a {
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: #ffd93b;
-  margin-left: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 200px;             /* set the container size */
+  height: 200px;
+  border-radius: 50%;       /* makes it a circle */
+  overflow: hidden;         /* hides anything outside the circle */
+  display: flex;            /* centers image */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* optional shadow */
+    background: #ffdc52;
 }
 
-.profile-pic:hover {
+.profile-pic img {
+  margin-bottom: -50px;
+  margin-left: 40px;
+  height: 200px;
+  object-fit: cover;        /* makes the image fill the circle properly */
+}
+
+
+/* .profile-pic:hover {
   width: 190px;
   height: 190px;
   margin-left: 10px;
@@ -66,7 +83,7 @@ header a {
   transform: rotate(360deg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: 2s;
-}
+} */
 
 .intro-text h1 {
   font-size: 100px;
@@ -138,7 +155,8 @@ header a {
   border-radius: 20px;
   cursor: pointer;
   font-size: 50px;
-  margin-left: 50px;;
+  margin-left: 50px;
+  margin-top: 15px;
 }
 
 .download-btn:hover{
@@ -219,6 +237,30 @@ header a {
 
 .contact{
   width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contact h1{
+  padding:5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact p{
+  padding:5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer{
+  width: 100%;
   background: #ffd93b;
   padding: 20px;
   display: flex;
@@ -227,16 +269,16 @@ header a {
   margin-top: 100px;
 }
 
-.contact h1{
-  text-align: right;
-  font-size: 30px;
+.footer p{
+  padding:5px;
+  text-align: center;
+  font-size: 16px;
 }
 
-.contact p{
-  text-align: right;
-  font-size: 20px;
+.footerfont{
+  font-family: 'Animeace',sans-serif;
+  
 }
-
 .gallery-grid{
   columns: 400px;
   height: 100%;
@@ -272,7 +314,7 @@ header a {
   .marquee-content {
     display: inline-block;
     padding-left: 100%; /* start off-screen */
-    animation: marquee 15s linear infinite;
+    animation: marquee 20s linear infinite;
   }
 
   .marquee-content span {
@@ -352,12 +394,20 @@ header a {
 
   /* Individual PDF card */
   .pdf-card {
-    width: 300px;
-    height: 450px;
+    width: 400px;
+    height: 390px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pdf-card img{
+    width: 100%;
+    height: auto;
   }
 
   .pdf-card h2{
