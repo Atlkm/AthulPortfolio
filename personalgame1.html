@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Athul K M</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <section class="animate">
+    <nav>
+         <div class="logo"><h2>ATLKM</h2></div>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Index.html#meme">About Me</a></li>
+        <li><a href="Index.html#gamess">Games</a></li>
+        <li><a href="Index.html#workss">Works</a></li>
+        <li><a href="Index.html#contacting">Contact</a></li>
+      </ul>
+    </nav>
+    </section>
+  </header>
+
+  <main>
+  <section class="animate">
+  <div class="Gametitle">
+  <h1>BUBBLE GAME</h1>
+  </div>
+  <div class="slot">  
+  <div class="slot-left">
+   <div class="imgtrial"></div>
+  <p>Guide a fragile bubble to an open window to deliver a brief moment of joy before it fades</p>
+  <div class="roles">
+  <h1>Genre:</h1>
+  • Platformer<br>
+  <br>
+  <h1>Game Mode:</h1>
+  • Single-Player<br>
+  <br>
+  <h1>My Role:</h1>
+  • Game Designer<br>
+  • Narrator<br>
+  • 3d Modeling<br>
+  • Texturing<br>
+  </div>
+</div>
+
+<div class="slot-right">
+  <style>
+      .container {
+        width: 100%;
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    video {
+        height: 430px;
+        border-radius: 10px;
+    }
+
+    /* Toggle button */
+    .playlist-btn {
+      height: 50px;
+      width: 200px;
+        border: none;
+        border: 3px solid black;
+        cursor: pointer;
+        margin: 0;
+        font-size: 25px;
+        font-family: 'HomepageBaukasten-Bold';
+    }
+
+    /* Floating dropdown */
+    .playlist {
+      width:250px;
+        border: 3px solid black;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(20px);
+        transition: 0.3s ease;
+        margin: 20px;
+        font-family: 'HomepageBaukasten-Book';
+    }
+
+    .down{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .down p{
+      font-family: 'HomepageBaukasten-Book';
+      padding: 10px;
+      width: 280px;
+      height: auto;
+      margin-top: 10px;
+    }  
+
+    .up{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
+    .up p{
+      font-size: 20px;
+      margin-top: 10px;
+      font-family: 'HomepageBaukasten-Book';
+    }
+
+    .side{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+    } 
+
+    .side h1{
+      font-family: 'HomepageBaukasten-Bold';
+    }
+     .view h1 {
+    font-size: 80px;
+    font-family: 'HomepageBaukasten-Bold';
+  }
+  .pro{
+  display: inline-block;
+  padding: 10px;
+  height: 80px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 3px solid #000;
+  margin-left: 100px;
+    }
+
+    .playlist.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+    
+    .video-item {
+        padding: 10px;
+        border: 3px solid black;
+        cursor: pointer;
+        margin: 10px;
+        transition: background 0.3s;
+        font-family: 'HomepageBaukasten-Book';
+        font-size: 18px;
+    }
+
+     @media (max-width: 900px) {
+        .playlist {
+            right: 0;
+            top: 100%;
+            margin-top: 10px;
+        }
+    }
+  </style>
+  <div class="container">
+  <div class="up">
+    <video id="player" controls>
+    <source src="PNG/trial.mp4" type="video/mp4">
+</video>
+<div class="text">
+    <p id="videoDescription">Video Description</p>  
+    </div>
+  </div>
+  <div class="down">
+    <button class="playlist-btn" onclick="togglePlaylist()">More Videos</button>
+
+    <div class="playlist" id="playlist">
+        <div class="video-item" onclick="changeVideo('PNG/trial.mp4','Blockout phase of the project')">▶ Blockout</div>
+        <div class="video-item" onclick="changeVideo('video2.mp4','Vertical slice showing core gameplay')">▶ Vertical Slice</div>
+        <!-- <div class="video-item" onclick="changeVideo('PNG/trial.mp4','Final expected output preview')">▶ Expected Output</div> -->
+        <div class="video-item" onclick="changeVideo('PNG/trial.mp4','Final expected output preview')">▶ Final Output</div>
+    </div>
+    </div>
+</div>
+
+<script>
+function togglePlaylist() {
+    document.getElementById("playlist").classList.toggle("active");
+}
+
+function changeVideo(src, description) {
+    const video = document.getElementById("player");
+    const source = video.querySelector("source");
+    const text = document.getElementById("videoDescription");
+
+    source.src = src;      // change video
+    video.load();
+    video.play();
+
+    text.textContent = description; // update text
+}
+</script>
+
+<div class="side">
+<h1> To view Full Process:</h1>
+<div class="view">
+    <a href="Index.html#gamess">
+    <button class="brutalist-btn">Document</button></a>
+
+    <a href="Index.html#gamess">
+    <button class="brutalist-btn">Storyboard</button></a>
+</div>      
+</div>
+
+</div>
+</div>
+</div>
+
+</section>
+
+<div class="footer-txt">
+  <p>© 2025 ATHUL K M. All Rights Reserved.</p>
+</div>
+</body>
+</html>

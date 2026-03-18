@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Athul K M</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <section class="animate2">
+    <nav>
+         <div class="logo"><h2>ATLKM</h2></div>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Index.html#meme">About Me</a></li>
+        <li><a href="Index.html#gamess">Games</a></li>
+        <li><a href="Index.html#workss">Works</a></li>
+        <li><a href="Index.html#contacting">Contact</a></li>
+      </ul>
+    </nav>
+    </section>
+  </header>
+
+  <main>
+  <section class="animate">
+  <div class="Gametitle">
+  <h1>RISKBOUND</h1>
+  </div>  
+  <div class="first-slot">
+  <style>
+  .viewer {
+    width: 55%;
+  }
+
+  /* Hide radio inputs */
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Big display area */
+  .display {
+    width: 100%;
+    height: 500px;
+    background: #000;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display img, .display video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Thumbnail slider */
+  .thumbs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .thumbs img, .thumbs video {
+    width: 135px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  /* Active thumbnail highlight */
+  input#media1:checked ~ .thumbs label[for="media1"] img,
+  input#media2:checked ~ .thumbs label[for="media2"] img,
+  input#media3:checked ~ .thumbs label[for="media3"] img,
+  input#media4:checked ~ .thumbs label[for="media4"] img,
+  input#media5:checked ~ .thumbs label[for="media5"] img,
+  input#media6:checked ~ .thumbs label[for="media6"] img,
+  input#media1:checked ~ .thumbs label[for="media1"] video,
+  {
+    opacity: 2;
+    border: 2px solid #4da3ff;
+  }
+
+  /* Show selected media in big viewer */
+  #media1:checked ~ .display .m1 { display: block; }
+  #media2:checked ~ .display .m2 { display: block; }
+  #media3:checked ~ .display .m3 { display: block; }
+  #media4:checked ~ .display .m4 { display: block; }
+  #media4:checked ~ .display .m5 { display: block; }
+  #media4:checked ~ .display .m6 { display: block; }
+
+  /* Hide all by default */
+  .display > * { display: none; }
+
+</style>
+
+<div class="viewer">
+
+  <!-- Radio buttons -->
+  <input type="radio" name="media" id="media1" checked>
+  <input type="radio" name="media" id="media2">
+  <input type="radio" name="media" id="media3">
+  <input type="radio" name="media" id="media4">
+  <input type="radio" name="media" id="media5">
+  <input type="radio" name="media" id="media6">
+
+  <!-- Big display -->
+  <div class="display">
+    <img src="GAMES/GAME 1/1.png" class="m2">
+    <img src="GAMES/GAME 1/2.png" class="m3">
+    <img src="GAMES/GAME 1/3.png" class="m4">
+    <!-- <img src="GAMES/GAME 1/4.png" class="m5">
+    <img src="GAMES/GAME 1/5.png" class="m6">  -->
+    <video class="m1" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="thumbs">
+    <label for="media1"><video src="https://www.w3schools.com/html/mov_bbb.mp4"></video></label>
+    <label for="media2"><img src="GAMES/GAME 1/1.png"></label>
+    <label for="media3"><img src="GAMES/GAME 1/2.png"></label>
+    <label for="media4"><img src="GAMES/GAME 1/3.png"></label>
+    <label for="media5"><img src="GAMES/GAME 1/4.png"></label>
+    <label for="media6"><img src="GAMES/GAME 1/5.png"></label>
+  </div>
+ </div>
+
+  <div class="first-slot-right">
+    <img src="GAME PNG/RISKBOUND MAIN.jpg"></a>
+  <p>Riskbound is a retro hack and slash adventure where every fight is a gamble. Time your strikes and master a deep combat system with fluid light and heavy attacks</p>
+  <div class="options">
+   <a href="Index.html#gamess">
+    <button class="brutalist-btn">View Game</button></a>
+ 
+  <!-- <a href="Index.html#gamess">
+    <button class="brutalist-btn">Process</button></a> -->
+  </div>
+  <h1>My Role:</h1>
+  <div class="roles">
+  • Sketching<br>
+  • Lelvel Designing<br>
+  • 2d Animation(Dice Animation)
+
+  </div>
+</div>
+</div>
+</section>
+
+<div class="footer-txt">
+  <p>© 2025 ATHUL K M. All Rights Reserved.</p>
+</div>
+</body>
+</html>
