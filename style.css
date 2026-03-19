@@ -1022,3 +1022,7 @@ section {
 #contacting{
   scroll-margin-top: -5px;
 }
+
+#home {
+  scroll-margin-top: 0px;
+}
