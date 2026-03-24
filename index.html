@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-  <section class="animate2">
+  <section class="animate2" id="home">
     <nav>
          <div class="logo"><h2>ATLKM</h2></div>
       <ul>
@@ -46,7 +46,7 @@
     <div class="abtimg">
     </div>
     <div class="btninme">
-      <a href="Resume.pdf">
+      <a href="Resume.pdf" target="_blank">
     <button class="brutalist-btn">Resume ➜</button></a>
     </div>
     </div>
@@ -263,50 +263,50 @@ margin-top: 25px;
 <div class="box">
   <div class="tag" style="margin-left: 4%;">#Game 1</div>
   <div class="content">
-    <p>Guide a fragile bubble to an open window to deliver<br> a brief moment of joy before it fades</p>
-    <a href="personalgame3.html">
-  <button class="brutalist-btn-cir">➜</button></a>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 8%;">#Game 2</div>
-  <div class="content">
-    <p>Guide a fragile bubble to an open window to deliver<br> a brief moment of joy before it fades</p>
+    <p>A calm 3D adventure where PIP explores <br>a magical forest and discovers nature’s secrets</p>
     <a href="personalgame1.html">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
 
 <div class="box">
-  <div class="tag" style="margin-left: 12%;">#Game 3</div>
+  <div class="tag" style="margin-left: 4%;">#Game 2</div>
   <div class="content">
-    <p>This is folder 3 content.</p>
+    <p>Guide a fragile bubble to an open window to deliver<br> a brief moment of joy before it fades</p>
     <a href="personalgame2.html">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
 
 <div class="box">
-  <div class="tag" style="margin-left: 16%;">#Game 4</div>
+  <div class="tag" style="margin-left: 4%;">#Game 3</div>
   <div class="content">
-    <p>This is folder 4 content.</p>
+    <p>VR Puzzle adventure where you guide a tiny warrior <br>and manipulate the world to escape.</p>
     <a href="personalgame3.html">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
 
 <div class="box">
-  <div class="tag" style="margin-left: 12%;">#Game 5</div>
+  <div class="tag" style="margin-left: 4%;">#Game 4</div>
   <div class="content">
-    <p>This is folder 4 content.</p>
+    <p>VR COOKING GAME</p>
     <a href="personalgame3.html">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
 
 <div class="box">
-  <div class="tag" style="margin-left: 15%;">#Game 6</div>
+  <div class="tag" style="margin-left: 4%;">#Game 5</div>
+  <div class="content">
+    <p>DETECTIVE GAME</p>
+    <a href="personalgame3.html">
+  <button class="brutalist-btn-cir">➜</button></a>
+  </div>
+</div>
+
+<div class="box">
+  <div class="tag" style="margin-left: 4%;">#Game 6</div>
   <div class="content">
     <p>This is folder 1 content.This is folder 1 content.This is folder 1 content.</p>
     <a href="personalgame3.html">
@@ -317,8 +317,8 @@ margin-top: 25px;
 <div class="box">
   <div class="tag2" style="margin-left: 40%;">#Concept Art 1</div>
   <div class="content">
-    <p>This is folder 2 content.</p>
-    <a href="personalgame3.html">
+    <p>VR rhythm-based blacksmithing game where<br> you forge powerful weapons by syncing your actions to music</p>
+    <!-- <a href="RVJ/UWG.pdf" target="_blank"> -->
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
@@ -326,8 +326,8 @@ margin-top: 25px;
 <div class="box">
   <div class="tag2" style="margin-left: 42%;">#Concept Art 2</div>
   <div class="content">
-    <p>This is folder 3 content.</p>
-    <a href="personalgame3.html">
+    <p>Concept art for an underwater game <br>featuring diverse environmental and prop assets</p>
+    <a href="RVJ/UWG.pdf" target="_blank">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
@@ -335,8 +335,8 @@ margin-top: 25px;
 <div class="box">
   <div class="tag3" style="margin-left: 68%;">#Game Deconstruction 1</div>
   <div class="content">
-    <p>This is folder 4 content.</p>
-    <a href="personalgame3.html">
+    <p>A brief deconstruction of Dangerous Dave <br>analyzing its core gameplay and design elements</p>
+    <a href="RVJ/DAVE.pdf" target="_blank">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
@@ -344,8 +344,8 @@ margin-top: 25px;
 <div class="box">
   <div class="tag3" style="margin-left: 70%;">#Game Deconstruction 2</div>
   <div class="content">
-    <p>This is folder 4 content.</p>
-    <a href="">
+    <p>A brief deconstruction of Monopoly <br>analyzing its core components and design.</p>
+    <a href="RVJ/MONOPOLY.pdf" target="_blank">
   <button class="brutalist-btn-cir">➜</button></a>
   </div>
 </div>
@@ -404,10 +404,105 @@ boxes.forEach(box => {
 </div>
 </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* SIDE SLIDER */
+    .side-slider {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease;
+    }
 
- <div class="footer-txt">
-  <p>© 2026 ATHUL K M. All Rights Reserved</p>
+    .side-slider a {
+      width: 45px;
+      height: 45px;
+      background: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 18px;
+    }
+
+    .side-slider a:hover {
+      background: #000;
+    }
+
+    .side-slider a.active {
+      background: #000;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- SIDE NAV -->
+
+<div class="side-slider" id="sideSlider">
+  <a href="#home" title="Home"><i class="fas fa-home"></i></a>
+  <a href="#meme" title="About Me"><i class="fas fa-user"></i></a>
+  <a href="#gamess" title="Work"><i class="fas fa-briefcase"></i></a>
+  <a href="#workss" title="Personal Work"><i class="fas fa-code"></i></a>
+  <a href="#contacting" title="Contact"><i class="fas fa-envelope"></i></a>
 </div>
+
+<!-- SECTIONS -->
+
+<section id="home"></section>
+<section id="about"></section>
+<section id="work"></section>
+<section id="personal"></section>
+<section id="contact"></section>
+
+<script>
+  const slider = document.getElementById("sideSlider");
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".side-slider a");
+
+  window.addEventListener("scroll", () => {
+
+    // Show slider after scroll
+    if (window.scrollY > 200) {
+      slider.style.opacity = "1";
+      slider.style.visibility = "visible";
+    } else {
+      slider.style.opacity = "0";
+      slider.style.visibility = "hidden";
+    }
+
+    // Highlight active section
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+
+  });
+</script>
+
+ <!-- <div class="footer-txt">
+  <p>© 2026 ATHUL K M. All Rights Reserved</p>
+</div> -->
   </section>
 </main>
 </body>

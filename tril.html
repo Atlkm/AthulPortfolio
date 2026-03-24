@@ -1,220 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Folder Stack</title>
+<title>Responsive Trial</title>
 
 <style>
-
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
+/* 🔹 Base (Mobile First) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.container{
-  width:1000px;
-  height:400px;
-  position:relative;
-  display: flex;
-  justify-content: center;
-}
-
-/* base folder */
-.box{
-  position:absolute;
-  width:980px;
-  height:200px;
-  border:2px solid white;
-  background:black;
-  border-radius:10px;
-  transition:0.35s;
-  cursor:pointer;
-}
-
-.box p{
-color: white;
-}
-
-.top{
-width:980px;
-height: 100px;px;
-background-color: black;
-}
-
-.content{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-}
-
-.content 
-
-/* step positions from top */
-.box:nth-child(1){ top:0px; z-index:1; }
-.box:nth-child(2){ top:40px; z-index:2; }
-.box:nth-child(3){ top:80px; z-index:3; }
-.box:nth-child(4){ top:120px; z-index:4; }
-.box:nth-child(5){ top:160px; z-index:5; }
-.box:nth-child(6){ top:200px; z-index:6; }
-.box:nth-child(7){ top:240px; z-index:7; }
-.box:nth-child(8){ top:280px; z-index:8; }
-.box:nth-child(9){ top:320px; z-index:9; }
-.box:nth-child(10){ top:360px; z-index:10; }
-
-/* hover */
-.box:hover{
-  transform:translateY(-10px);
-}
-
-/* click open */
-.box.up{
-  transform:translateY(-100px);
-  /* z-index:50; */
-}
-
-.tag{
-  background:white;
-  color:black;
-  width:120px;
-  margin:10px;
-  font-size: 20px;
-  padding: 5px;
+.header {
+  background: #333;
+  color: white;
+  padding: 15px;
   text-align: center;
 }
 
-.bottom-folder{
-    width:1020px;
-    height:165px;
-    background:black;
-    clip-path: polygon(0% 0%,100% 0%,98% 100%,2% 100%);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:40px;
-    position:relative;
-    z-index:100;
-    border:2px solid white;
-}
-
-.wrk{
+.nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background: #555;
+}
+
+.nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav a:hover {
+  background: #777;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.box {
+  background: lightblue;
+  margin: 10px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🔹 Tablet */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+}
+
+/* 🔹 Desktop */
+@media (min-width: 1024px) {
+  .box {
+    flex: 1 1 22%;
+  }
 }
 </style>
 </head>
 
 <body>
 
-  <div class="wrk">
-  <div class="top"></div>
+<div class="header">
+  <h1>My Responsive Website</h1>
+</div>
+
+<div class="nav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
 <div class="container">
-<div class="box">
-  <div class="tag" style="margin-left: 5%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 1 content.This is folder 1 content.This is folder 1 content.</p>
-    <button>View Project</button>
-  </div>
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+  <div class="box">Box 4</div>
 </div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 10%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 2 content.</p>
-    <button>Open Details</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 12%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 3 content.</p>
-    <button>See More</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 18%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 4 content.</p>
-    <button>Launch</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 12%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 4 content.</p>
-    <button>Launch</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 15%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 1 content.This is folder 1 content.This is folder 1 content.</p>
-    <button>View Project</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 40%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 2 content.</p>
-    <button>Open Details</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 45%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 3 content.</p>
-    <button>See More</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 79%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 4 content.</p>
-    <button>Launch</button>
-  </div>
-</div>
-
-<div class="box">
-  <div class="tag" style="margin-left: 83%;">Folder 1</div>
-  <div class="content">
-    <p>This is folder 4 content.</p>
-    <button>Open</button>
-  </div>
-</div>
-</div>
-<div class="bottom-folder">Works</div>
-</div>
-
-<script>
-const boxes = document.querySelectorAll(".box");
-
-boxes.forEach(box => {
-  box.addEventListener("click", () => {
-
-    if(box.classList.contains("up")){
-      box.classList.remove("up");
-    } else {
-      boxes.forEach(b => b.classList.remove("up")); // close others
-      box.classList.add("up"); // open clicked
-    }
-
-  });
-});
-</script>
-
-<style>
-  
 
 </body>
 </html>

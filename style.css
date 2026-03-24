@@ -358,7 +358,7 @@ margin: 5px;
 
 /* .personal-work img{
   /* height: 200px;
-  width: 260px; */
+  width: 260px; 
 } */
 
 .workside{
@@ -889,7 +889,7 @@ button{
 .options{
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: center;
 margin-top: 20px;
 }
 
@@ -1002,10 +1002,10 @@ gap: 5px;
     transform: translateY(0);
   }
 }
-
+/* 
 section {
   scroll-margin-top: 20px;
-}
+} */
 
 #meme{
  scroll-margin-top: 70px; 
@@ -1021,8 +1021,4 @@ section {
 
 #contacting{
   scroll-margin-top: -5px;
-}
-
-#home {
-  scroll-margin-top: 0px;
 }
