@@ -29,15 +29,6 @@ body {
   padding: 30px 50px;
 }
 
-/* Navigation Bar */
-
-/* header {
-  position: sticky;
-  top: 10px;
-  z-index: 999;
-  width: 100%;
-} */
-
 header nav {
   display: flex;
     justify-content: space-around;
@@ -1022,3 +1013,4 @@ section {
 #contacting{
   scroll-margin-top: -5px;
 }
+
